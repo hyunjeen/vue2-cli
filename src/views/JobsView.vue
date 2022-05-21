@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      v-for="item in jobs"
-      :key="item"
+      v-for="(item, index) in jobs"
+      :key="index"
     >
       {{ item.title }}
     </div>

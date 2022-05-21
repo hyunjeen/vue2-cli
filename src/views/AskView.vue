@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      v-for="askitem in askitems"
-      :key="askitem"
+      v-for="(askitem, index) in askitems"
+      :key="index"
     >
       {{ askitem.title }}
     </div>
