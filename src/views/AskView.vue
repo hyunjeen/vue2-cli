@@ -1,25 +1,26 @@
 <template>
   <div>
     <div
-      v-for="(askitem, index) in askitems"
+      v-for="(askitem, index) in GET_ASK"
       :key="index"
     >
+      <!-- <a :href="askitem.url">{{ askitem.title }}</a> -->
+      <router-link :to="`/item/${askitem.id}`">
+        {{ askitem.user }}
+      </router-link>
       {{ askitem.title }}
     </div>
   </div>
 </template>
 
 <script>
-import { fetchAskList } from '../api/index.js'
+import { mapGetters } from 'vuex'
 export default {
-  data() {
-    return {
-      askitems: null 
-    }
-  },
+  computed: {
+    ...mapGetters(['GET_ASK'])
+  }, 
   created() {
-    fetchAskList()
-      .then(res => this.askitems = res.data)
+    this.$store.dispatch('FETCH_ASK')
   },
 }
 </script>
