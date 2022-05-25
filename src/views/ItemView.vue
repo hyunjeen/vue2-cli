@@ -2,7 +2,7 @@
   <div>
     <section>
       <div class="user-container">
-        <div><font-awesome-icon icon="fa-solid fa-user"></font-awesome-icon></div>
+        <div><font-icon icon="fa-solid fa-user"></font-icon></div>
         <div class="user-description">
           <router-link :to="`/user/${iteminfo.user}`">
             {{ iteminfo.user }}

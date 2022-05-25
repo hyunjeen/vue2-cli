@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 const UseIcon = [faUser]
 const FontAwesomeImport = (vue) => {
   library.add(...UseIcon)
-  return vue.component('FontAwesomeIcon', FontAwesomeIcon)
+  return vue.component('FontIcon', FontAwesomeIcon)
 }
 
 export {
